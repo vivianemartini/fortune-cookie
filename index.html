@@ -22,7 +22,7 @@
       sizes="16x16"
       href="./assets/fortune-favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="./assets/fortune-favicon/site.webmanifest" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,10 +40,15 @@
       <h1>Qual é a sua sorte de hoje?</h1>
       <p>Abra o biscoito e descubra!</p>
 
-      <img src="./assets/fortune-cookie.png" alt="Fortune cookie closed" />
+      <img
+        onclick="newMessage(event)"
+        id="luckyClick"
+        src="./assets/fortune-cookie.png"
+        alt="Fortune cookie closed"
+      />
     </div>
 
-    <div class="cardTwo">
+    <div class="cardTwo hide">
       <h1>Aqui está a sua sorte de hoje:</h1>
       <div class="quote-box">
         <p>
@@ -54,7 +59,11 @@
 
       <img src="./assets/fortune-cookie-open.png" alt="Fortune cookie opened" />
 
-      <button>Abrir outro biscoito</button>
+      <div class="btnTwo">
+        <button onclick="reset()">Abrir outro biscoito</button>
+      </div>
     </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
